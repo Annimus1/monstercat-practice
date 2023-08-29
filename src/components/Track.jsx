@@ -1,12 +1,37 @@
+import { useState } from "react"
 
 function Track({song, artist}) {
+  const [ play, setPlay ] = useState(false)
+
+  const handler = ()=>{ 
+    if(document.getElementById(song.source).paused){
+      document.getElementById(song.source).play()
+    }
+    else{
+      document.getElementById(song.source).pause()
+    }
+
+    setPlay(!play)
+  }
+
+  const playIcon = <svg onClick={handler} className='fill-white h-8 w-auto hover:fill-green-600' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 6v12l10-6z"/></svg>
+  const pauseIcon =<svg onClick={handler} className='fill-white h-8 w-auto hover:fill-green-600' xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M8 7h3v10H8zm5 0h3v10h-3z"/></svg>
+
   return (
     <tr className="w-full min-h-[30px] md:w-full">
       
       <td className="p-4">{song.id}</td>
       
       <td className="p-2">
-        <svg className='fill-white h-8 w-auto' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 6v12l10-6z"/></svg>
+        {
+          play? pauseIcon : playIcon
+        }
+
+        {
+          song.source != '' && <audio id={song.source}> 
+            <source src={`https://docs.google.com/uc?export=download&id=${song.source}`} />
+          </audio>
+        }
       </td>
       
       <td className="w-56 md:w-[1000px] lg:text-xl">
