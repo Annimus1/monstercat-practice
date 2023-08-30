@@ -2,6 +2,8 @@
 
 A small practice to know how to play audio and video from a server using ReactJs.
 
+try it at [monstercat-practice](monstercat-practice.vercel.app).
+
 ## Install
 
 Make sure you have NodeJs v18.17.0 or above and npm 9.8.1 or above.
