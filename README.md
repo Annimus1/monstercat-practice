@@ -1,8 +1,23 @@
-# React + Vite
+# Monstercat - Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small practice to know how to play audio and video from a server using ReactJs.
 
-Currently, two official plugins are available:
+## Install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Make sure you have NodeJs v18.17.0 or above and npm 9.8.1 or above.
+
+` git clone https://github.com/Annimus1/monstercat-practice.git `
+
+` cd monstercat-practice `
+
+` npm i ` or ` npm install `
+
+` npm run dev `
+
+## Screenshots
+
+![Cover](/public/cover.png)
+
+!["Track-list"](/public/track.png)
+
+![Mobile](/public/cover_mobile.png)
