@@ -2,7 +2,7 @@
 
 A small practice to know how to play audio and video from a server using ReactJs.
 
-try it at [monstercat-practice](monstercat-practice.vercel.app).
+try it at [monstercat-practice](https://monstercat-practice.vercel.app).
 
 ## Install
 
