@@ -1,6 +1,6 @@
 # Monstercat - Practice
 
-A small practice to know how to play audio and video from a server using ReactJs.
+A small practice to know how to play audio and video from a server using ReactJs based on [Monstercat](https://www.frontendpractice.com/projects/monstercat).
 
 try it at [monstercat-practice](https://monstercat-practice.vercel.app).
 
