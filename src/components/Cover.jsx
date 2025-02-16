@@ -1,29 +1,32 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import data from "../assets/Playlist";
+import { songContext } from "../context/SongContext";
+
 
 function Cover() {
-
+  
   const imgUrl = 'https://th.bing.com/th/id/R.8863a420e0de711cf4d2286b14ca70a0?rik=CLF5QdUigGbwfg&riu=http%3a%2f%2fimg2-ak.lst.fm%2fi%2fu%2far0%2fecae82853b784726c7e2c4e2ba55a4fd&ehk=OtDvAyDAYkqsGWv5xFhZAPrPjdfUz4S5KOB8TGxcOr4%3d&risl=&pid=ImgRaw&r=0'
   const [playing, setPlaying] = useState(false);
-  const choice = () => (Math.floor(Math.random() * data[0].songs.length));
-  const [audio] = useState(new Audio(data[0].songs[choice()].source));
+  const { currentSong } = useContext(songContext);
 
   function handleClick() {
-    if (playing && audio) {
-      // play the first song 
-      audio.pause();
+    // Song is already playing
+    if (playing && currentSong) {
+      currentSong.pause();
       setPlaying(!playing);
-    } else {
+    } 
+    // Song is not playing
+    else {
+      currentSong.play();
       setPlaying(!playing);
-      audio.play();
     }
   }
 
-  useEffect(()=>{
-    audio.addEventListener('ended', ()=>{
+  useEffect(() => {
+    currentSong.addEventListener('ended', () => {
       setPlaying(false);
     })
-  },[])
+  }, [])
 
   return (
     <section className='text-white h-full w-full px-8 mt-32 pb-2 md:grid md:grid-cols-2 bg-gradient-to-b from-transparent to-black'>

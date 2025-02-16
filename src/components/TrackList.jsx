@@ -1,7 +1,10 @@
 import Track from "./Track"
 import data from '../assets/Playlist'
+import { songContext } from "../context/SongContext";
+import { useContext } from "react";
 
 function TrackList() {
+  const { currentSong, setNewSong } = useContext(songContext);
   return (
     <section className="text-white px-8 pt-8 pb-2 md:px-10 md:pb-6 md:pt-10 lg:px-28 bg-black">
 
@@ -10,7 +13,7 @@ function TrackList() {
       <table>
         <tbody>
           {
-            data[0].songs.map((song)=> <Track key={song.id} song={song} artist={data[0].artist} />)
+            data[0].songs.map((song) => <Track key={song.id} song={song} artist={data[0].artist} />)
           }
         </tbody>
       </table>
