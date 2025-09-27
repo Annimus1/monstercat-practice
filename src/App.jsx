@@ -7,10 +7,10 @@ import Footer from "./Footer";
 
 function App() {
   const bgImage = {
-    backgroundImage:`url('/Night Visions.jpg')`,
-    backgroundRepeat:"no-repeat" ,
-    backgroundSize: "contain",
-    backgroundPositionX: "center"
+    backgroundImage:`url('/Night_Vision.jpg')`, 
+    backgroundRepeat:"no-repeat" , 
+    backgroundSize: 'contain',
+    backgroundPositionX: 'center'
   }
 
   return (

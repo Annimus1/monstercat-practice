@@ -1,9 +1,11 @@
 import { useState, useEffect, useContext } from "react"
 import data from "../assets/Playlist";
 import { songContext } from "../context/SongContext";
-import imgUrl from '../../public/Night Visions.jpg'
+import imgUrl from "../../public/Night_Vision.jpg"
 
 function Cover() {
+  
+
   const [playing, setPlaying] = useState(false);
   const { currentSong } = useContext(songContext);
 
