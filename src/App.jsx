@@ -5,16 +5,11 @@ import Header from "./components/header";
 import Newsletter from "./components/Newsletter";
 import Footer from "./Footer";
 
-// reference https://www.frontendpractice.com/projects/monstercat
-
 function App() {
-  const imgUrl = 'https://th.bing.com/th/id/R.8863a420e0de711cf4d2286b14ca70a0?rik=CLF5QdUigGbwfg&riu=http%3a%2f%2fimg2-ak.lst.fm%2fi%2fu%2far0%2fecae82853b784726c7e2c4e2ba55a4fd&ehk=OtDvAyDAYkqsGWv5xFhZAPrPjdfUz4S5KOB8TGxcOr4%3d&risl=&pid=ImgRaw&r=0'
-
   const bgImage = {
-    backgroundImage:`url(${imgUrl})`, 
+    backgroundImage:`url('/Night_Vision.jpg')`, 
     backgroundRepeat:"no-repeat" , 
-    objectFit:"contain",
-    backgroundSize: '100%',
+    backgroundSize: 'contain',
     backgroundPositionX: 'center'
   }
 

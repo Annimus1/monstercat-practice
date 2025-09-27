@@ -1,11 +1,10 @@
 import { useState, useEffect, useContext } from "react"
 import data from "../assets/Playlist";
 import { songContext } from "../context/SongContext";
-
+import imgUrl from "../../public/Night_Vision.jpg"
 
 function Cover() {
   
-  const imgUrl = 'https://th.bing.com/th/id/R.8863a420e0de711cf4d2286b14ca70a0?rik=CLF5QdUigGbwfg&riu=http%3a%2f%2fimg2-ak.lst.fm%2fi%2fu%2far0%2fecae82853b784726c7e2c4e2ba55a4fd&ehk=OtDvAyDAYkqsGWv5xFhZAPrPjdfUz4S5KOB8TGxcOr4%3d&risl=&pid=ImgRaw&r=0'
   const [playing, setPlaying] = useState(false);
   const { currentSong } = useContext(songContext);
 
@@ -47,8 +46,8 @@ function Cover() {
       <div className="md:flex md:flex-col md:h-auto md:mx-auto md:justify-center lg:mx-0">
 
         <div className=" md:pb-20">
-          <h1 className="font-[Raleway] text-4xl lg:text-6xl md:text-4xl font-semibold mt-5 mb-2">Night Visionas</h1>
-          <span className="font-[Raleway] text-xl font-medium text-green-500">Imagine Dragons</span>
+          <h1 className="font-[Raleway] text-4xl lg:text-6xl md:text-4xl font-semibold mt-5 mb-2">{data[0].album}</h1>
+          <span className="font-[Raleway] text-xl font-medium text-green-500">{data[0].artist}</span>
         </div>
 
         <div className=" mt-6 pb-6 flex flex-col md:block gap-4">
