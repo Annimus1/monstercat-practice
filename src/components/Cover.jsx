@@ -5,6 +5,7 @@ import imgUrl from "../../public/Night_Vision.jpg"
 
 function Cover() {
   
+
   const [playing, setPlaying] = useState(false);
   const { currentSong } = useContext(songContext);
 
@@ -28,7 +29,8 @@ function Cover() {
   }, [])
 
   return (
-    <section className='text-white h-full w-full px-8 mt-32 pb-2 md:grid md:grid-cols-2 bg-gradient-to-b from-transparent to-black'>
+    <section className='text-white h-full w-full px-8 mt-32 pb-2 md:grid md:grid-cols-2 
+      bg-gradient-to-b from-transparent to-black'>
 
       <div className="w-full h-auto">
         <img

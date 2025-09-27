@@ -16,7 +16,7 @@ function App() {
   return (
     <div  className="min-w-screen min-h-screen w-full h-full overflow-x-hidden overflow-y-hidden relative bg-black">
       <div style={bgImage} className="bg-black" >
-        <div className="z-10 h-full backdrop-blur-md">
+        <div className="z-10 h-auto backdrop-blur-md">
           
           {/* Header */}
           <Header/>
