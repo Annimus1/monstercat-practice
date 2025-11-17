@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react"
 import data from "../assets/Playlist";
 import { songContext } from "../context/SongContext";
-import imgUrl from "../../public/Night_Vision.jpg"
 
 function Cover() {
   
@@ -34,7 +33,7 @@ function Cover() {
 
       <div className="w-full h-auto">
         <img
-          src={imgUrl} loading="lazy" alt="Album cover"
+          src={'/Night_Vision.jpg'} loading="lazy" alt="Album cover"
           className="w-full h-auto max-w-[460px] md:w-[400px] mx-auto"
         />
 
